@@ -32,3 +32,14 @@ then
 else
   echo "Not valid Email"
 fi
+
+echo "**************************************************"
+echo "Mobile Number : "
+read  number
+pat3="^91[ ]?[6-9]{1}[0-9]{9}$"
+if [[ $number =~ $pat3 ]]
+then
+  echo "$number is valid Number"
+else
+  echo "Not valid Number"
+fi
