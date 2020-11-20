@@ -4,7 +4,7 @@ echo "Regex Patterns Assignment "
 echo "First Name : "
 read name
 pat="^[A-Z a-z]{2,}"
-if [[ $name == $pat ]]
+if [[ $name =~ $pat ]]
 then
   echo "$name is valid Name"
 else
@@ -16,7 +16,7 @@ echo "***********************************************"
 echo "Last Name : "
 read name
 pat="^[A-Z a-z]{3,}"
-if [[ $name == $pat ]]
+if [[ $name =~ $pat ]]
 then
   echo "$name is valid Name"
 else
@@ -42,4 +42,16 @@ then
   echo "$number is valid Number"
 else
   echo "Not valid Number"
+fi
+
+
+echo "********************************************************"
+
+read  pass 
+pat4="^[A-Z]{1}[a-z A-Z]{6,}+[0-9]{1,}+[!@#\$%&\*\^]{1,}+[0-9]{1,}$"
+if [[$pass =~$pat4]]
+then 
+echo "$pass is valid Password"
+else
+echo "not a valid password"
 fi
