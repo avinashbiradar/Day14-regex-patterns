@@ -1,9 +1,6 @@
-echo "Regex Patterns Assignment "
-
-
-echo "First Name : "
+echo "Last Name : "
 read name
-pat="^[A-Z a-z]{2,}"
+pat="^[A-Z a-z]{3,}"
 if [[ $name == $pat ]]
 then
   echo "$name is valid Name"
